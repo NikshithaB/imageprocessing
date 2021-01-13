@@ -114,8 +114,14 @@ output:
 ![image](https://user-images.githubusercontent.com/72548737/104432133-8e146780-553d-11eb-9e5f-fb9a80d4cbbe.png)
 
 Program 5:Program to covert the given image to different color space
+description:
+
+BGR2RGB:When the image file is read with the OpenCV function imread() , the order of colors is BGR (blue, green, red). On the other hand, in Pillow, the order of colors is assumed to be RGB (red, green, blue). Therefore, if you want to use both the Pillow function and the OpenCV function, you need to convert BGR and RGB.
+BGR2HSV:HSV color space is the most suitable color space for color based image segmentation. ... In OpenCV, value range for 'hue', 'saturation' and 'value' are respectively 0-179, 0-255 and 0-255.
+Ycrcb: YCbCr represents colors as combinations of a brightness signal and two chroma signals.
 
 program:
+
 import cv2 
 img = cv2.imread('flower1.jpg') 
 img1 = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) 
@@ -129,6 +135,7 @@ cv2.imshow('image', img3)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
+output:
 
 
 Program6:Create an image from 2d array
