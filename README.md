@@ -169,3 +169,42 @@ output:
 ![image](https://user-images.githubusercontent.com/72548737/104433816-5e665f00-553f-11eb-92c7-87ee39de9131.png)
 
 
+program7:Program to find the neighbourhood of matrix
+
+description:
+
+import numpy as np
+
+M = [[1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]]
+
+M = np.asarray(M)
+N = np.zeros(M.shape)
+def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range()
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: # if entry doesn't exist
+                pass
+    return sum(l)-M[x][y] # exclude the entry itself
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+
+print ("Original matrix:\n", M)
+print ("Summed neighbors matrix:\n", N)
+
+Output:
+Original matrix:
+ [[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Summed neighbors matrix:
+ [[11. 19. 13.]
+ [23. 40. 27.]
+ [17. 31. 19.]]
+
