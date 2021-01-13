@@ -5,6 +5,9 @@ Description:
      Binary image:A binary image is one that consists of pixels that can have one of exactly two colors, usually black and white. ... In Photoshop parlance, a binary image is the same as an image in "Bitmap" mode. Binary images often arise in digital image processing as masks or thresholding, and dithering.
 To read an image we use cv2.imread() function
 to write an image we use cv2.imwrite() function
+cv2. waitKey() is a keyboard binding function. ... The function waits for specified milliseconds for any keyboard event.
+cv2. destroyAllWindows() simply destroys all the windows we created
+
 Program:
 import numpy as np
 import cv2
@@ -82,4 +85,28 @@ output:
 ![image](https://user-images.githubusercontent.com/72548737/104429403-6c65b100-553a-11eb-95cc-e31d22376c7c.png)
 ![image](https://user-images.githubusercontent.com/72548737/104429595-a636b780-553a-11eb-927f-a98d6f5422d0.png)
 ![image](https://user-images.githubusercontent.com/72548737/104429708-c8303a00-553a-11eb-844c-884e8eaec05e.png)
+
+
+program4:Convert the image to gray scale and binary image
+description:
+Grayscale: A grayscale (or graylevel) image is simply one in which the only colors are shades of gray. ... Often, the grayscale intensity is stored as an 8-bit integer giving 256 possible different shades of gray from black to white.
+     Binary image:A binary image is one that consists of pixels that can have one of exactly two colors, usually black and white. ... In Photoshop parlance, a binary image is the same as an image in "Bitmap" mode. Binary images often arise in digital image processing as masks or thresholding, and dithering.
+To read an image we use cv2.imread() function
+Threshold:Thresholding is a technique in OpenCV, which is the assignment of pixel values in relation to the threshold value provided. In thresholding, each pixel value is compared with the threshold value. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (generally 255).
+program:
+import cv2
+img = cv2.imread('flower1.jpg')
+cv2.imwrite('graynature.jpg',img)
+cv2.imshow('Original',img,)
+img = cv2.imread('flower1.jpg',0)
+cv2.imwrite('gray.jpg',img)
+cv2.imshow('Origi',img,)
+img = cv2.imread('flower1.jpg', 2) 
+ret, bw_img = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY) 
+cv2.imshow("Binary", bw_img) 
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+output:
 
