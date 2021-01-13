@@ -172,7 +172,9 @@ output:
 program7:Program to find the neighbourhood of matrix
 
 description:
-
+ Given a  matrix and a set of cell indexes e.g., an array of (i, j) where i indicates row and j column. For every given cell index (i, j), finding sums of all matrix elements except the elements present in i’th row and/or j’th column.
+ 
+The function "shape" returns the shape of an array. The shape is a tuple of integers. These numbers denote the lengths of the corresponding array dimension
 import numpy as np
 
 M = [[1, 2, 3],
