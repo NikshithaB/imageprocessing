@@ -49,3 +49,33 @@ cv2.waitKey(0)
 Output:
 ![image](https://user-images.githubusercontent.com/72548737/104424839-bc417980-5534-11eb-9d19-c5ed866b2039.png)
 
+
+
+Program3:Program to find sum and mean of the image
+Description:
+Mean:'mean' value gives the contribution of individual pixel intensity for the entire image & variance is normally used to find how each pixel varies from the neighbouring pixel (or centre pixel) and is used in classify into different regions.
+sum:Adding Images To add two images or add a constant value to an image. • [imadd] function adds the value of each pixel in one of the input images with the corresponding pixel in the other input image and returns the sum in the corresponding pixel of the output image
+A = imread( filename ) reads the image from the file specified by filename , inferring the format of the file from its contents.
+ cv2. imread() method loads an image from the specified file. 
+ program:
+import cv2
+import os
+path = 'C:\Pictures'
+imgs = []
+
+files = os.listdir(path)
+for file in files:
+    filepath=path+"\\"+file
+    imgs.append(cv2.imread(filepath))
+i=0
+im = []
+for im in imgs:
+    #cv2.imshow(files[i],imgs[i])
+    im+=imgs[i]
+    i=i+1
+cv2.imshow("sum of four pictures",im)
+meanImg = im/len(files)
+cv2.imshow("mean of four pictures",meanImg)
+cv2.waitKey(0)
+
+
