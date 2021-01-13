@@ -38,6 +38,9 @@ output = cv2.resize(image, dsize)
 cv2.imshow('Original',output) 
 cv2.waitKey(0)
 Output:
+![image](https://user-images.githubusercontent.com/72548737/104435362-252eee80-5541-11eb-93f9-2d28d3f00786.png)
+
+
 ![image](https://user-images.githubusercontent.com/72548737/104424351-1e4daf00-5534-11eb-87df-36464688837a.png)
 
 
