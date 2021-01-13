@@ -114,3 +114,24 @@ output:
 ![image](https://user-images.githubusercontent.com/72548737/104432133-8e146780-553d-11eb-9e5f-fb9a80d4cbbe.png)
 
 
+Program6:Create an image from 2d array
+
+Description:
+     Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats
+To make a numpy array, you can just use the np. array() function. All you need to do is pass a list to it, and optionally, you can also specify the data type of the data     
+program:
+import numpy as np
+from PIL import Image
+import cv2
+array = np.zeros([100, 200, 3], dtype=np.uint8)
+array[:,:100] = [200, 200, 200] 
+array[:,100:] = [200, 100, 200]   
+
+img = Image.fromarray(array)
+img.save('testrgb.png')
+img.show()
+cv2.waitKey(0)
+
+output:
+
+
