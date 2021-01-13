@@ -113,6 +113,23 @@ output:
 ![image](https://user-images.githubusercontent.com/72548737/104431936-560d2480-553d-11eb-8386-a9ddc44d623f.png)
 ![image](https://user-images.githubusercontent.com/72548737/104432133-8e146780-553d-11eb-9e5f-fb9a80d4cbbe.png)
 
+Program 5:Program to covert the given image to different color space
+
+program:
+import cv2 
+img = cv2.imread('flower1.jpg') 
+img1 = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) 
+img2= cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+img3=cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)   
+cv2.imshow('image', img1)
+cv2.waitKey(0)
+cv2.imshow('image', img2) 
+cv2.waitKey(0)
+cv2.imshow('image', img3)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
 
 Program6:Create an image from 2d array
 
@@ -133,5 +150,6 @@ img.show()
 cv2.waitKey(0)
 
 output:
+![image](https://user-images.githubusercontent.com/72548737/104433816-5e665f00-553f-11eb-92c7-87ee39de9131.png)
 
 
