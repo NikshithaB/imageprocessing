@@ -16,3 +16,21 @@ cv2.imwrite("grayscale.png",image)
 ![image](https://user-images.githubusercontent.com/72548737/104420307-84cfce80-552e-11eb-9c2c-f3820f433f9c.png)
 ![image](https://user-images.githubusercontent.com/72548737/104423509-0c1f4100-5533-11eb-9072-8f90ab7293c6.png)
 
+
+Program2:Program to performe linear transformation
+
+Description:
+Linear Transformation:Piece-wise Linear Transformation is type of gray level transformation that is used for image enhancement. It is a spatial domain method. It is used for manipulation of an image so that the result is more suitable than the original for a specific application.
+
+Resizing an image means changing the dimensions of it, be it width alone, height alone or changing both of them. Also, the aspect ratio of the original image could be preserved in the resized image. To resize an image, OpenCV provides cv2.resize() function.
+Program:
+import cv2
+image= cv2.imread('flower1.jpg')
+scale_percent = 500
+width = int(image.shape[1] * scale_percent / 100)
+height = int(image.shape[0] * scale_percent / 100)
+dsize = (width, height)
+output = cv2.resize(image, dsize)
+cv2.imshow('Original',output) 
+cv2.waitKey(0)
+
