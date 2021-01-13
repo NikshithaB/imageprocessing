@@ -23,6 +23,7 @@ Description:
 Linear Transformation:Piece-wise Linear Transformation is type of gray level transformation that is used for image enhancement. It is a spatial domain method. It is used for manipulation of an image so that the result is more suitable than the original for a specific application.
 
 Resizing an image means changing the dimensions of it, be it width alone, height alone or changing both of them. Also, the aspect ratio of the original image could be preserved in the resized image. To resize an image, OpenCV provides cv2.resize() function.
+Rotation: This is a simple example of a linear transformation. Linear Transformations A transformation of the plane is called a linear transformation if it corresponds to multiplying each point (x, y) by some 2 × 2 matrix A, i.e. ... Rotation of the plane by any angle around the origin.
 Program:
 import cv2
 image= cv2.imread('flower1.jpg')
@@ -35,4 +36,14 @@ cv2.imshow('Original',output)
 cv2.waitKey(0)
 Output:
 ![image](https://user-images.githubusercontent.com/72548737/104424351-1e4daf00-5534-11eb-87df-36464688837a.png)
+
+
+Program2(b): Rotation
+import cv2
+image=cv2.imread('flower1.jpg')
+cv2.imshow('original',image)
+src=cv2.rotate(image,cv2.ROTATE_90_CLOCKWISE)
+cv2.imshow('output',src)
+cv2.waitKey(0)
+
 
