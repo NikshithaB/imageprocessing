@@ -38,7 +38,6 @@ output = cv2.resize(image, dsize)
 cv2.imshow('Original',output) 
 cv2.waitKey(0)
 Output:
-![image](https://user-images.githubusercontent.com/72548737/104435362-252eee80-5541-11eb-93f9-2d28d3f00786.png)
 
 
 ![image](https://user-images.githubusercontent.com/72548737/104424351-1e4daf00-5534-11eb-87df-36464688837a.png)
@@ -85,9 +84,10 @@ cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
 
 output:
-![image](https://user-images.githubusercontent.com/72548737/104429403-6c65b100-553a-11eb-95cc-e31d22376c7c.png)
-![image](https://user-images.githubusercontent.com/72548737/104429595-a636b780-553a-11eb-927f-a98d6f5422d0.png)
-![image](https://user-images.githubusercontent.com/72548737/104429708-c8303a00-553a-11eb-844c-884e8eaec05e.png)
+![image](https://user-images.githubusercontent.com/72548737/104435362-252eee80-5541-11eb-93f9-2d28d3f00786.png)
+![image](https://user-images.githubusercontent.com/72548737/104435489-50194280-5541-11eb-8120-fd7171a0e09d.png)
+
+
 
 
 program4:Convert the image to gray scale and binary image
@@ -112,6 +112,13 @@ cv2.destroyAllWindows()
 
 
 output:
+
+![image](https://user-images.githubusercontent.com/72548737/104429403-6c65b100-553a-11eb-95cc-e31d22376c7c.png)
+![image](https://user-images.githubusercontent.com/72548737/104429595-a636b780-553a-11eb-927f-a98d6f5422d0.png)
+![image](https://user-images.githubusercontent.com/72548737/104429708-c8303a00-553a-11eb-844c-884e8eaec05e.png)
+
+
+
 ![image](https://user-images.githubusercontent.com/72548737/104431785-29f1a380-553d-11eb-91d9-ef122bab015b.png)
 ![image](https://user-images.githubusercontent.com/72548737/104431936-560d2480-553d-11eb-8386-a9ddc44d623f.png)
 ![image](https://user-images.githubusercontent.com/72548737/104432133-8e146780-553d-11eb-9e5f-fb9a80d4cbbe.png)
