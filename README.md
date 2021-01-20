@@ -1,5 +1,5 @@
 # imageprocessing
-Program1:Program to display grayscale image
+**Program1:Program to display grayscale image**
 Description:
      Grayscale: A grayscale (or graylevel) image is simply one in which the only colors are shades of gray. ... Often, the grayscale intensity is stored as an 8-bit integer giving 256 possible different shades of gray from black to white.
      Binary image:A binary image is one that consists of pixels that can have one of exactly two colors, usually black and white. ... In Photoshop parlance, a binary image is the same as an image in "Bitmap" mode. Binary images often arise in digital image processing as masks or thresholding, and dithering.
@@ -209,4 +209,120 @@ Summed neighbors matrix:
  [[11. 19. 13.]
  [23. 40. 27.]
  [17. 31. 19.]]
+
+**program8:Operator overloading**
+#include <iostream>
+using namespace std;
+class matrix
+{
+ int r1, c1, i, j, a1;
+ int a[10][10];
+
+public:int get()
+ {
+  cout << "Enter the row and column size for the  matrix\n";
+  cin >> r1;
+  cin >> c1;
+   cout << "Enter the elements of the matrix\n";
+  for (i = 0; i < r1; i++)
+  {
+   for (j = 0; j < c1; j++)
+   {
+    cin>>a[i][j];
+
+   }
+  }
+ 
+ 
+ };
+ void operator+(matrix a1)
+ {
+ int c[i][j];
+  
+   for (i = 0; i < r1; i++)
+   {
+    for (j = 0; j < c1; j++)
+    {
+     c[i][j] = a[i][j] + a1.a[i][j];
+    }
+   
+  }
+  cout<<"addition is\n";
+  for(i=0;i<r1;i++)
+  {
+   cout<<" ";
+   for (j = 0; j < c1; j++)
+   {
+    cout<<c[i][j]<<"\t";
+   }
+   cout<<"\n";
+  }
+
+ };
+
+  void operator-(matrix a2)
+ {
+ int c[i][j];
+  
+   for (i = 0; i < r1; i++)
+   {
+    for (j = 0; j < c1; j++)
+    {
+     c[i][j] = a[i][j] - a2.a[i][j];
+    }
+   
+  }
+  cout<<"subtraction is\n";
+  for(i=0;i<r1;i++)
+  {
+   cout<<" ";
+   for (j = 0; j < c1; j++)
+   {
+    cout<<c[i][j]<<"\t";
+   }
+   cout<<"\n";
+  }
+ };
+
+ void operator*(matrix a3)
+ {
+  int c[i][j];
+
+  for (i = 0; i < r1; i++)
+  {
+   for (j = 0; j < c1; j++)
+   {
+    c[i][j] =0;
+    for (int k = 0; k < r1; k++)
+    {
+     c[i][j] += a[i][k] * (a3.a[k][j]);
+    }
+  }
+  }
+  cout << "multiplication is\n";
+  for (i = 0; i < r1; i++)
+  {
+   cout << " ";
+   for (j = 0; j < c1; j++)
+   {
+    cout << c[i][j] << "\t";
+   }
+   cout << "\n";
+  }
+ };
+
+};
+
+int main()
+{
+ matrix p,q;
+ p.get();
+ q.get();
+ p + q;
+ p - q;
+ p * q;
+return 0;
+}
+
+
 
