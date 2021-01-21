@@ -309,7 +309,7 @@ public:int get()
    }
    cout << "\n";
   }
- };
+   };
 
 };
 
@@ -324,5 +324,34 @@ int main()
 return 0;
 }
 
+
+  **output:**
+  Enter the row and colunm size for the matrix
+  2
+  2
+  Enter the element of the matrix
+  6
+  7
+  5
+  8
+  Enter the row and colunm size for the matrix
+  2
+  2
+  Enter the element of the matrix
+  2
+  3
+  1
+  4
+  addition is
+  8 10
+  6
+  12
+  subtraction is
+  4 4
+  4 4
+  multiplication is
+  19 46
+  18
+  47
 
 
