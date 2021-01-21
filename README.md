@@ -210,7 +210,7 @@ Summed neighbors matrix:
  [23. 40. 27.]
  [17. 31. 19.]]
 
-**program8:Operator overloading**
+**program8: write c++ program to perform Operator overloading**
 description:
 Using operator overloading in C++, you can specify more than one meaning for an operator in one scope. The purpose of operator overloading is to provide a special meaning of an operator for a user-defined data type. With the help of operator overloading, you can redefine the majority of the C++ operators.
 program:
@@ -358,4 +358,39 @@ return 0;
   18
   47
 
+**program 9:develop a program to find the neighbor of each elememt of matrix**
+import numpy as np
+i=0
+j=0
+a= np.array([[1,2,3,4,5], [2,3,4,5,6],[3,4,5,6,7],[4,5,6,7,8],[5,6,7,8,9]])
+print("a : ",str(a))
+def neighbors(radius, rowNumber, columnNumber):
+     return [[a[i][j] if  i >= 0 and i < len(a) and j >= 0 and j < len(a[0]) else 0
+                for j in range(columnNumber-1-radius, columnNumber+radius)]
+                    for i in range(rowNumber-1-radius, rowNumber+radius)]
+neighbors(1, 2, 3)
+**output**
+a :  [[1 2 3 4 5]
+ [2 3 4 5 6]
+ [3 4 5 6 7]
+ [4 5 6 7 8]
+ [5 6 7 8 9]]
+[[2, 3, 4], [3, 4, 5], [4, 5, 6]]
+
+
+
+**program 10:Develop a program to implement negative transformation**
+description:
+The second linear transformation is negative transformation, which is invert of identity transformation. In negative transformation, each value of the input image is subtracted from the L-1 and mapped onto the output image
+**program:**
+import cv2
+img=cv2.imread("p3.jpg")
+img_neg = 255-img
+cv2.imshow('Original',img)  
+cv2.waitKey(0)
+cv2.imshow('negation',img_neg) 
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+Output:
 
