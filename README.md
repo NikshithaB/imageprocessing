@@ -211,6 +211,10 @@ Summed neighbors matrix:
  [17. 31. 19.]]
 
 **program8:Operator overloading**
+description:
+Using operator overloading in C++, you can specify more than one meaning for an operator in one scope. The purpose of operator overloading is to provide a special meaning of an operator for a user-defined data type. With the help of operator overloading, you can redefine the majority of the C++ operators.
+program:
+
 #include <iostream>
 using namespace std;
 class matrix
