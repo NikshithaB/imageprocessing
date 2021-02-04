@@ -30,6 +30,7 @@ Linear Transformation:Piece-wise Linear Transformation is type of gray level tra
 Resizing an image means changing the dimensions of it, be it width alone, height alone or changing both of them. Also, the aspect ratio of the original image could be preserved in the resized image. To resize an image, OpenCV provides cv2.resize() function.
 Rotation: This is a simple example of a linear transformation. Linear Transformations A transformation of the plane is called a linear transformation if it corresponds to multiplying each point (x, y) by some 2 × 2 matrix A, i.e. ... Rotation of the plane by any angle around the origin.
 Program:
+```python
 import cv2
 image= cv2.imread('flower1.jpg')
 scale_percent = 500
@@ -39,6 +40,7 @@ dsize = (width, height)
 output = cv2.resize(image, dsize)
 cv2.imshow('Original',output) 
 cv2.waitKey(0)
+```
 Output:
 
 
@@ -46,13 +48,14 @@ Output:
 
 
 Program2(b): Rotation
+```python
 import cv2
 image=cv2.imread('flower1.jpg')
 cv2.imshow('original',image)
 src=cv2.rotate(image,cv2.ROTATE_90_CLOCKWISE)
 cv2.imshow('output',src)
 cv2.waitKey(0)
-
+```
 Output:
 ![image](https://user-images.githubusercontent.com/72548737/104424839-bc417980-5534-11eb-9d19-c5ed866b2039.png)
 
@@ -65,6 +68,7 @@ sum:Adding Images To add two images or add a constant value to an image. • [im
 A = imread( filename ) reads the image from the file specified by filename , inferring the format of the file from its contents.
  cv2. imread() method loads an image from the specified file. 
  program:
+ ```python
 import cv2
 import os
 path = 'C:\Pictures'
@@ -84,7 +88,7 @@ cv2.imshow("sum of four pictures",im)
 meanImg = im/len(files)
 cv2.imshow("mean of four pictures",meanImg)
 cv2.waitKey(0)
-
+```
 output:
 ![image](https://user-images.githubusercontent.com/72548737/104435362-252eee80-5541-11eb-93f9-2d28d3f00786.png)
 ![image](https://user-images.githubusercontent.com/72548737/104435489-50194280-5541-11eb-8120-fd7171a0e09d.png)
@@ -99,6 +103,7 @@ Grayscale: A grayscale (or graylevel) image is simply one in which the only colo
 To read an image we use cv2.imread() function
 Threshold:Thresholding is a technique in OpenCV, which is the assignment of pixel values in relation to the threshold value provided. In thresholding, each pixel value is compared with the threshold value. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (generally 255).
 program:
+```python
 import cv2
 img = cv2.imread('flower1.jpg')
 cv2.imwrite('graynature.jpg',img)
@@ -111,7 +116,7 @@ ret, bw_img = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 cv2.imshow("Binary", bw_img) 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 
 output:
 
@@ -129,7 +134,7 @@ BGR2HSV:HSV color space is the most suitable color space for color based image s
 Ycrcb: YCbCr represents colors as combinations of a brightness signal and two chroma signals.
 
 program:
-
+```python
 import cv2 
 img = cv2.imread('flower1.jpg') 
 img1 = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) 
@@ -142,7 +147,7 @@ cv2.waitKey(0)
 cv2.imshow('image', img3)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 output:
 ![image](https://user-images.githubusercontent.com/72548737/104431785-29f1a380-553d-11eb-91d9-ef122bab015b.png)
 ![image](https://user-images.githubusercontent.com/72548737/104431936-560d2480-553d-11eb-8386-a9ddc44d623f.png)
@@ -155,6 +160,7 @@ Description:
      Python Imaging Library (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats
 To make a numpy array, you can just use the np. array() function. All you need to do is pass a list to it, and optionally, you can also specify the data type of the data     
 program:
+```python
 import numpy as np
 from PIL import Image
 import cv2
@@ -166,7 +172,7 @@ img = Image.fromarray(array)
 img.save('testrgb.png')
 img.show()
 cv2.waitKey(0)
-
+```
 output:
 ![image](https://user-images.githubusercontent.com/72548737/104433816-5e665f00-553f-11eb-92c7-87ee39de9131.png)
 
@@ -178,6 +184,7 @@ description:
  
 The function "shape" returns the shape of an array. The shape is a tuple of integers. These numbers denote the lengths of the corresponding array dimension
 import numpy as np
+```python
 
 M = [[1, 2, 3],
     [4, 5, 6],
@@ -201,7 +208,7 @@ for i in range(M.shape[0]):
 
 print ("Original matrix:\n", M)
 print ("Summed neighbors matrix:\n", N)
-
+```
 Output:
 Original matrix:
  [[1 2 3]
@@ -362,6 +369,7 @@ return 0;
 
 **program 9:develop a program to find the neighbor of each elememt of matrix**
 import numpy as np
+```python
 i=0
 j=0
 a= np.array([[1,2,3,4,5], [2,3,4,5,6],[3,4,5,6,7],[4,5,6,7,8],[5,6,7,8,9]])
@@ -371,6 +379,7 @@ def neighbors(radius, rowNumber, columnNumber):
                 for j in range(columnNumber-1-radius, columnNumber+radius)]
                     for i in range(rowNumber-1-radius, rowNumber+radius)]
 neighbors(1, 2, 3)
+```
 **output**
 a :  [[1 2 3 4 5]
  [2 3 4 5 6]
@@ -385,6 +394,7 @@ a :  [[1 2 3 4 5]
 description:
 The second linear transformation is negative transformation, which is invert of identity transformation. In negative transformation, each value of the input image is subtracted from the L-1 and mapped onto the output image
 **program:**
+```python
 import cv2
 img=cv2.imread("p3.jpg")
 img_neg = 255-img
@@ -393,6 +403,6 @@ cv2.waitKey(0)
 cv2.imshow('negation',img_neg) 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 Output:
 
