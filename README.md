@@ -381,13 +381,14 @@ def neighbors(radius, rowNumber, columnNumber):
 neighbors(1, 2, 3)
 ```
 **output**
+```
 a :  [[1 2 3 4 5]
  [2 3 4 5 6]
  [3 4 5 6 7]
  [4 5 6 7 8]
  [5 6 7 8 9]]
 [[2, 3, 4], [3, 4, 5], [4, 5, 6]]
-
+```
 
 
 **program 10:Develop a program to implement negative transformation**
