@@ -409,3 +409,44 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72548737/106879720-7a13ee00-6716-11eb-86fd-8fa93c51a3c4.png)
 
+**Q:program to implement threshold transformation**
+Program
+```python
+import cv2  
+import numpy as np  
+from matplotlib import pyplot as plt
+image1 = cv2.imread('bird.jpg')  
+img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
+ret, thresh2 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY_INV)
+ret, thresh3 = cv2.threshold(img, 120, 255, cv2.THRESH_TRUNC)
+ret, thresh4 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO)
+ret, thresh5 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO_INV)
+
+plt.title("original")
+plt.imshow(image1)
+plt.show()
+#cv2.imshow('Original',image1)
+
+plt.title("binary threshold")
+plt.imshow( thresh1)
+plt.show()
+
+plt.title('Binary Threshold Inverted')
+plt.imshow( thresh2)
+plt.show()
+
+plt.title('Truncated Threshold')
+plt.imshow( thresh3)
+plt.show()
+
+plt.title('Set to 0')
+plt.imshow( thresh4)
+plt.show()
+
+plt.title('Set to 0 Inverted')
+plt.imshow(thresh5)
+plt.show()
+if cv2.waitKey(0) & 0xff == 27:  
+    cv2.destroyAllWindows()   
+```
